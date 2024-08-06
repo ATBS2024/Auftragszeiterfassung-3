@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-Einträge</title>
+    <link rel="stylesheet" href="Auftragszeiterfassung.css">
+</head>
+<body>
+    <header>
+        Log-Einträge
+    </header>
+    <div class="container">
+        <button id="exportButton" aria-label="Exportiere Log-Einträge als Excel">Exportieren als Excel</button>
+        <table id="logTable" role="table">
+            <thead>
+                <tr role="row">
+                    <th role="columnheader">Auftragsnummer</th>
+                    <th role="columnheader">Kunde</th>
+                    <th role="columnheader">Artikelnummer</th>
+                    <th role="columnheader">Arbeitsgang</th>
+                    <th role="columnheader">Mitarbeiternummer</th>
+                    <th role="columnheader">Startzeit</th>
+                    <th role="columnheader">Endzeit</th>
+                    <th role="columnheader">Dauer</th>
+                    <th role="columnheader">Aktionen</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <nav>
+            <a href="index.html" aria-label="Zurück zur Hauptseite">Zurück zur Hauptseite</a>
+        </nav>
+    </div>
+    <script src="log.js"></script>
+</body>
+</html>

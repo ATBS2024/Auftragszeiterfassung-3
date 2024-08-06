@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auftragszeiterfassung</title>
+    <link rel="stylesheet" href="Auftragszeiterfassung.css">
+</head>
+<body>
+    <header>
+        Auftragszeiterfassung
+    </header>
+    <main class="container">
+        <form id="timeTrackingForm">
+            <div class="form-group">
+                <label for="auftragsnummer">Auftragsnummer</label>
+                <input type="text" id="auftragsnummer" name="auftragsnummer" aria-describedby="auftragsnummer-feedback" required>
+                <div class="feedback" id="auftragsnummer-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label for="kunde">Kunde</label>
+                <input type="text" id="kunde" name="kunde" aria-describedby="kunde-feedback" required>
+                <div class="feedback" id="kunde-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label for="artikelnummer">Artikelnummer</label>
+                <input type="text" id="artikelnummer" name="artikelnummer" aria-describedby="artikelnummer-feedback" required>
+                <div class="feedback" id="artikelnummer-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label for="arbeitsgang">Arbeitsgang</label>
+                <select id="arbeitsgang" name="arbeitsgang" aria-describedby="arbeitsgang-feedback" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="Lasern">Lasern</option>
+                    <option value="Rohrlasern">Rohrlasern</option>
+                    <option value="Stanzen">Stanzen</option>
+                    <option value="Kanten">Kanten</option>
+                    <option value="Schweißen (Edelstahl)">Schweißen (Edelstahl)</option>
+                    <option value="Schweißen (Stahl)">Schweißen (Stahl)</option>
+                    <option value="Fräsen">Fräsen</option>
+                    <option value="Drehen">Drehen</option>
+                    <option value="Richten">Richten</option>
+                    <option value="Montage">Montage</option>
+                </select>
+                <div class="feedback" id="arbeitsgang-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label for="mitarbeiternummer">Mitarbeiternummer</label>
+                <input type="number" id="mitarbeiternummer" name="mitarbeiternummer" aria-describedby="mitarbeiternummer-feedback" required>
+                <div class="feedback" id="mitarbeiternummer-feedback"></div>
+            </div>
+            <div class="button-group">
+                <button type="button" id="startButton">Start</button>
+                <button type="button" id="endButton" disabled>Ende</button>
+            </div>
+            <div id="timerDisplay"></div>
+            <div id="feedbackDisplay"></div>
+        </form>
+        <nav>
+            <a href="log.html">Zu den Log-Einträgen</a>
+        </nav>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
